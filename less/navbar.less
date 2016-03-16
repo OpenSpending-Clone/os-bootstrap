@@ -417,7 +417,7 @@
     &:hover,
     &:focus {
       color: @navbar-default-brand-hover-color;
-      background-color: @navbar-default-brand-hover-bg;
+      background-color: transparent;
     }
   }
 
@@ -559,7 +559,15 @@
     &:hover,
     &:focus {
       color: @navbar-inverse-brand-hover-color;
-      background-color: @navbar-inverse-brand-hover-bg;
+      background-color: transparent;
+    }
+
+    &.navbar-brand-black {
+      &,
+      &:hover,
+      &:active {
+        background-color: @navbar-inverse-brand-bg;
+      }
     }
   }
 
