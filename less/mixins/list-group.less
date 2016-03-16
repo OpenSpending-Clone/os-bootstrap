@@ -21,9 +21,9 @@
       &.active,
       &.active:hover,
       &.active:focus {
-        color: #fff;
-        background-color: @color;
-        border-color: @color;
+        color: @color;
+        box-shadow: inset 6px 0 0 @color;
+        background-color: darken(@background, 5%);
       }
     }
   }

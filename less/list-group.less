@@ -25,16 +25,6 @@
   // Place the border on the list items and negative margin up for better styling
   margin-bottom: -1px;
   background-color: @list-group-bg;
-  border: 1px solid @list-group-border;
-
-  // Round the first and last items
-  &:first-child {
-    .border-top-radius(@list-group-border-radius);
-  }
-  &:last-child {
-    margin-bottom: 0;
-    .border-bottom-radius(@list-group-border-radius);
-  }
 }
 
 
@@ -88,8 +78,9 @@ button.list-group-item {
   &.active:hover,
   &.active:focus {
     z-index: 2; // Place active items above their siblings for proper border styling
-    color: @list-group-active-color;
-    background-color: @list-group-active-bg;
+    color: @list-group-link-hover-color;
+    background-color: @list-group-hover-bg;
+    box-shadow: inset 6px 0 0 @list-group-active-bg;
     border-color: @list-group-active-border;
 
     // Force color to inherit for custom content
@@ -99,7 +90,7 @@ button.list-group-item {
       color: inherit;
     }
     .list-group-item-text {
-      color: @list-group-active-text-color;
+      color: @list-group-link-hover-color;
     }
   }
 }
@@ -127,4 +118,50 @@ button.list-group-item {
 .list-group-item-text {
   margin-bottom: 0;
   line-height: 1.3;
+}
+
+// Inverse list group
+
+.list-group.list-group-inverse {
+  @item-selector: ~".list-group-item";
+
+  @{item-selector} {
+    color: darken(@state-inverse-text, 40);
+    background-color: @state-inverse-bg;
+
+    &.disabled,
+    &.disabled:hover,
+    &.disabled:focus {
+      color: darken(@state-inverse-text, 40);
+
+      .list-group-item-text {
+        color: inherit;
+      }
+    }
+  }
+
+  a@{item-selector},
+  button@{item-selector} {
+    color: @state-inverse-text;
+
+    .list-group-item-heading {
+      color: inherit;
+    }
+
+    .list-group-item-text {
+      color: darken(@state-inverse-text, 40);
+    }
+
+    &:hover,
+    &:focus {
+      color: @state-inverse-text;
+      background-color: @state-inverse-active-bg;
+    }
+    &.active,
+    &.active:hover,
+    &.active:focus {
+      color: @state-inverse-text;
+      background-color: @state-inverse-active-bg;
+    }
+  }
 }

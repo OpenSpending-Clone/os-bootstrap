@@ -56,6 +56,50 @@
   }
 }
 
+.button-variant-outline(@background, @color) {
+  color: @background;
+  background-color: @color;
+  border-color: @background;
+
+  &:focus,
+  &.focus,
+  &:hover {
+    color: @color;
+    background-color: @background;
+    border-color: @background;
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: @color;
+    background-color: @background;
+    border-color: @background;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: @color;
+      background-color: @background;
+      border-color: @background;
+    }
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: @background;
+      border-color: @background;
+    }
+  }
+}
+
 // Button sizes
 .button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
   padding: @padding-vertical @padding-horizontal;

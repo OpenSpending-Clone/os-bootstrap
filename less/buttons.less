@@ -86,6 +86,39 @@
   .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
 }
 
+// Outline buttons
+// -------------------------
+
+.btn-outline {
+
+  &.btn-default {
+    .button-variant-outline(@btn-outline-default-color, @btn-outline-color);
+  }
+  &.btn-primary {
+    .button-variant-outline(@btn-primary-bg, @btn-outline-color);
+  }
+  // Success appears as green
+  &.btn-success {
+    .button-variant-outline(@btn-success-bg, @btn-outline-color);
+  }
+  // Info appears as blue-green
+  &.btn-info {
+    .button-variant-outline(@btn-info-bg, @btn-outline-color);
+  }
+  // Warning appears as orange
+  &.btn-warning {
+    .button-variant-outline(@btn-warning-bg, @btn-outline-color);
+  }
+  // Danger and error appear as red
+  &.btn-danger {
+    .button-variant-outline(@btn-danger-bg, @btn-outline-color);
+  }
+
+  &.btn-transparent {
+    background: transparent;
+  }
+
+}
 
 // Link buttons
 // -------------------------

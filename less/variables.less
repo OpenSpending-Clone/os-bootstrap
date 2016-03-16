@@ -7,18 +7,18 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-@gray-base:              #000;
-@gray-darker:            lighten(@gray-base, 13.5%); // #222
-@gray-dark:              lighten(@gray-base, 20%);   // #333
-@gray:                   lighten(@gray-base, 33.5%); // #555
-@gray-light:             lighten(@gray-base, 46.7%); // #777
-@gray-lighter:           lighten(@gray-base, 93.5%); // #eee
+@gray-base:              #2a2d34;
+@gray-darker:            lighten(@gray-base, 13.5%);
+@gray-dark:              lighten(@gray-base, 20%);
+@gray:                   lighten(@gray-base, 33.5%);
+@gray-light:             lighten(@gray-base, 46.7%);
+@gray-lighter:           lighten(@gray-base, 93.5%);
 
-@brand-primary:         darken(#428bca, 6.5%); // #337ab7
-@brand-success:         #5cb85c;
-@brand-info:            #5bc0de;
+@brand-primary:         #3a99d9;
+@brand-success:         #2abb9c;
+@brand-info:            #7d4e92;
 @brand-warning:         #f0ad4e;
-@brand-danger:          #d9534f;
+@brand-danger:          #d93d3a;
 
 
 //== Scaffolding
@@ -42,8 +42,8 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-sans-serif:  "Hind", "Open Sans", sans-serif;
+@font-family-serif:       "Hind", "Open Sans", sans-serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
@@ -81,30 +81,34 @@
 @icon-font-name:          "glyphicons-halflings-regular";
 //** Element ID within SVG icon file.
 @icon-font-svg-id:        "glyphicons_halflingsregular";
+//** File name for all OS font files.
+@os-icon-font-name:       "os-icons";
+//** Element ID within OS SVG icon file.
+@os-icon-font-svg-id:     "os-icons";
 
 
 //== Components
 //
 //## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
 
-@padding-base-vertical:     6px;
-@padding-base-horizontal:   12px;
+@padding-base-vertical:     5px;
+@padding-base-horizontal:   10px;
 
-@padding-large-vertical:    10px;
-@padding-large-horizontal:  16px;
+@padding-large-vertical:    8px;
+@padding-large-horizontal:  14px;
 
-@padding-small-vertical:    5px;
-@padding-small-horizontal:  10px;
+@padding-small-vertical:    3px;
+@padding-small-horizontal:  8px;
 
 @padding-xs-vertical:       1px;
-@padding-xs-horizontal:     5px;
+@padding-xs-horizontal:     4px;
 
 @line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
 @line-height-small:         1.5;
 
-@border-radius-base:        4px;
-@border-radius-large:       6px;
-@border-radius-small:       3px;
+@border-radius-base:        0.2em;
+@border-radius-large:       0.3em;
+@border-radius-small:       0.1em;
 
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    #fff;
@@ -167,6 +171,9 @@
 @btn-danger-color:               #fff;
 @btn-danger-bg:                  @brand-danger;
 @btn-danger-border:              darken(@btn-danger-bg, 5%);
+
+@btn-outline-color:              #fff;
+@btn-outline-default-color:      #666;
 
 @btn-link-disabled-color:        @gray-light;
 
@@ -390,12 +397,12 @@
 
 //=== Inverted navbar
 // Reset inverted navbar basics
-@navbar-inverse-color:                      lighten(@gray-light, 15%);
-@navbar-inverse-bg:                         #222;
-@navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-color:                      #fff;
+@navbar-inverse-bg:                         #2a2d34;
+@navbar-inverse-border:                     #2a2d34;
 
 // Inverted navbar links
-@navbar-inverse-link-color:                 lighten(@gray-light, 15%);
+@navbar-inverse-link-color:                 #fff;
 @navbar-inverse-link-hover-color:           #fff;
 @navbar-inverse-link-hover-bg:              transparent;
 @navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
@@ -496,21 +503,26 @@
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-@state-success-text:             #3c763d;
-@state-success-bg:               #dff0d8;
+@state-success-text:             darken(#2abb9c, 7%);
+@state-success-bg:               lighten(spin(#2abb9c, -10), 47%);
 @state-success-border:           darken(spin(@state-success-bg, -10), 5%);
 
-@state-info-text:                #31708f;
-@state-info-bg:                  #d9edf7;
-@state-info-border:              darken(spin(@state-info-bg, -10), 7%);
+@state-info-text:                darken(#3a99d9, 7%);
+@state-info-bg:                  lighten(spin(#3a99d9, -10), 37%);
+@state-info-border:              darken(spin(@state-info-bg, -10), 5%);
 
-@state-warning-text:             #8a6d3b;
-@state-warning-bg:               #fcf8e3;
-@state-warning-border:           darken(spin(@state-warning-bg, -10), 5%);
+@state-warning-text:             darken(#f0ad4e, 11%);
+@state-warning-bg:               lighten(spin(#f0ad4e, -7), 34%);
+@state-warning-border:           darken(spin(@state-warning-bg, -10), 3%);
 
-@state-danger-text:              #a94442;
-@state-danger-bg:                #f2dede;
+@state-danger-text:              #d93d3a;
+@state-danger-bg:                lighten(spin(#d93d3a, -10), 37%);
 @state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
+
+@state-inverse-text:             #fff;
+@state-inverse-bg:               #2a2d34;
+@state-inverse-active-bg:        darken(@state-inverse-bg, 10%);
+@state-inverse-border:           darken(@state-inverse-bg, 10%);
 
 
 //== Tooltips
@@ -595,19 +607,23 @@
 //** Modal title line-height
 @modal-title-line-height:     @line-height-base;
 
+//** Text color in modal
+@modal-text-color:           darken(#fff, 40%);
+@modal-content-text-color:   @modal-text-color;
+@modal-header-text-color:    #fff;
+@modal-footer-text-color:    @modal-text-color;
+
 //** Background color of modal content area
-@modal-content-bg:                             #fff;
+@modal-content-bg:                             #2a2d34;
 //** Modal content border color
-@modal-content-border-color:                   rgba(0,0,0,.2);
-//** Modal content border color **for IE8**
-@modal-content-fallback-border-color:          #999;
+@modal-content-border-color:                   darken(@navbar-inverse-bg, 10%);
 
 //** Modal backdrop background color
 @modal-backdrop-bg:           #000;
 //** Modal backdrop opacity
 @modal-backdrop-opacity:      .5;
 //** Modal header border color
-@modal-header-border-color:   #e5e5e5;
+@modal-header-border-color:   darken(@navbar-inverse-bg, 10%);
 //** Modal footer border color
 @modal-footer-border-color:   @modal-header-border-color;
 
@@ -724,9 +740,9 @@
 @panel-success-border:        @state-success-border;
 @panel-success-heading-bg:    @state-success-bg;
 
-@panel-info-text:             @state-info-text;
-@panel-info-border:           @state-info-border;
-@panel-info-heading-bg:       @state-info-bg;
+@panel-info-text:             #fff;
+@panel-info-border:           @brand-info;
+@panel-info-heading-bg:       @brand-info;
 
 @panel-warning-text:          @state-warning-text;
 @panel-warning-border:        @state-warning-border;

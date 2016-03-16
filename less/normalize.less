@@ -422,3 +422,24 @@ td,
 th {
   padding: 0;
 }
+
+//
+// Hide outlines
+//
+
+* {
+  outline: none;
+  -ms-hide-outline: ~"expression(this.hideFocus = true)";
+}
+
+:focus,
+:active {
+  outline: none;
+  -ms-hide-outline: ~"expression(this.hideFocus = true)";
+}
+
+:focus::-moz-focus-inner,
+:active::-moz-focus-inner {
+  outline:none;
+  border:0;
+}
