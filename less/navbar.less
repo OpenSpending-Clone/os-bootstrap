@@ -428,7 +428,7 @@
   .navbar-nav {
     > li > a {
       color: @navbar-default-link-color;
-      transition: box-shadow 0.5s ease-in-out 0s;
+      transition: box-shadow 0.3s ease-in-out 0s;
 
       &:hover,
       &:focus {
@@ -707,6 +707,7 @@
 
   &.navbar-footer {
     color: darken(@navbar-inverse-color, 40);
+    background-color: darken(@navbar-inverse-bg, 10%);
     padding: @navbar-padding-vertical @navbar-padding-horizontal;
 
     hr {
