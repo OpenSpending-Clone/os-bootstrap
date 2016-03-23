@@ -179,6 +179,23 @@
     display: block;
   }
 
+  &.navbar-brand-primary {
+    box-shadow: inset @navbar-height 0 0 @brand-primary;
+  }
+  &.navbar-brand-success {
+    box-shadow: inset @navbar-height 0 0 @brand-success;
+  }
+  &.navbar-brand-info {
+    box-shadow: inset @navbar-height 0 0 @brand-info;
+  }
+  &.navbar-brand-warning {
+    box-shadow: inset @navbar-height 0 0 @brand-warning;
+  }
+  &.navbar-brand-danger {
+    box-shadow: inset @navbar-height 0 0 @brand-danger;
+  }
+
+
   @media (min-width: @grid-float-breakpoint) {
     .navbar > .container &,
     .navbar > .container-fluid & {
