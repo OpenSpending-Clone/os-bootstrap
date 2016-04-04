@@ -85,6 +85,10 @@
 .btn-danger {
   .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
 }
+// Inverse (black) button
+.btn-inverse {
+  .button-variant(@btn-inverse-color; @btn-inverse-bg; @btn-inverse-border);
+}
 
 // Outline buttons
 // -------------------------
@@ -112,6 +116,10 @@
   // Danger and error appear as red
   &.btn-danger {
     .button-variant-outline(@btn-danger-bg, @btn-outline-color);
+  }
+  // Danger and error appear as red
+  &.btn-inverse {
+    .button-variant-outline(@btn-inverse-bg, @btn-inverse-color);
   }
 
   &.btn-transparent {

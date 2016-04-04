@@ -107,8 +107,8 @@
 @line-height-small:         1.5;
 
 @border-radius-base:        0.2em;
-@border-radius-large:       0.3em;
-@border-radius-small:       0.1em;
+@border-radius-large:       0.24em;
+@border-radius-small:       0.12em;
 
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    #fff;
@@ -171,6 +171,10 @@
 @btn-danger-color:               #fff;
 @btn-danger-bg:                  @brand-danger;
 @btn-danger-border:              darken(@btn-danger-bg, 5%);
+
+@btn-inverse-color:              #fff;
+@btn-inverse-bg:                 darken(#2a2d34, 10%);
+@btn-inverse-border:             darken(@btn-inverse-bg, 5%);
 
 @btn-outline-color:              #fff;
 @btn-outline-default-color:      #666;
@@ -499,6 +503,10 @@
 @jumbotron-font-size:            ceil((@font-size-base * 1.5));
 @jumbotron-heading-font-size:    ceil((@font-size-base * 4.5));
 
+@jumbotron-inverse-color:                darken(#fff, 40);
+@jumbotron-inverse-bg:                   darken(#2a2d34, 10%);
+@jumbotron-inverse-heading-color:        #fff;
+
 
 //== Form states and alerts
 //
@@ -640,6 +648,10 @@
 @alert-padding:               15px;
 @alert-border-radius:         @border-radius-base;
 @alert-link-font-weight:      bold;
+
+@alert-default-bg:            #eee;
+@alert-default-text:          @gray-dark;
+@alert-default-border:        #ccc;
 
 @alert-success-bg:            @state-success-bg;
 @alert-success-text:          @state-success-text;
