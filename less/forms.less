@@ -174,6 +174,22 @@ output {
     background-position: top right;
     background-repeat: no-repeat;
   }
+
+  &.form-control-inverse {
+    @border-color: @btn-inverse-border;
+    @text-color: @btn-inverse-bg;
+    @background-color: @btn-inverse-color;
+
+    border-color: @border-color;
+    background-color: @background-color;
+    color: @text-color;
+    .box-shadow(inset 0 1px 1px rgba(0,0,0,.075)); // Redeclare so transitions work
+    &:focus {
+      border-color: darken(@border-color, 10%);
+      @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px lighten(@border-color, 20%);
+      .box-shadow(@shadow);
+    }
+  }
 }
 
 
