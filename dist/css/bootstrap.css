@@ -6421,6 +6421,24 @@ button.list-group-item-danger.active:focus {
 .panel-danger > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #f3c3d2;
 }
+.panel-inverse {
+  border-color: #131518;
+}
+.panel-inverse > .panel-heading {
+  color: #fff;
+  background-color: #131518;
+  border-color: #131518;
+}
+.panel-inverse > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #131518;
+}
+.panel-inverse > .panel-heading .badge {
+  color: #131518;
+  background-color: #fff;
+}
+.panel-inverse > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #131518;
+}
 .embed-responsive {
   position: relative;
   display: block;
