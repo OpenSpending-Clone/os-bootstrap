@@ -1,6 +1,6 @@
 {
-  "name": "bootstrap",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "name": "os-bootstrap",
+  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web. Customized version for OpenSpending.",
   "version": "3.3.6",
   "keywords": [
     "css",
@@ -13,6 +13,12 @@
   ],
   "homepage": "http://getbootstrap.com",
   "author": "Twitter, Inc.",
+  "contributors": [
+    {
+      "name": "Levko Kravets",
+      "email": "levko.ne@gmail.com"
+    }
+  ],
   "scripts": {
     "build": "grunt",
     "build:dist": "grunt dist",
@@ -26,10 +32,10 @@
   "main": "./dist/js/npm",
   "repository": {
     "type": "git",
-    "url": "https://github.com/twbs/bootstrap.git"
+    "url": "https://github.com/openspending/os-bootstrap.git"
   },
   "bugs": {
-    "url": "https://github.com/twbs/bootstrap/issues"
+    "url": "https://github.com/openspending/os-bootstrap/issues"
   },
   "license": "MIT",
   "devDependencies": {

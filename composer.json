@@ -1,6 +1,6 @@
 {
-  "name": "twbs/bootstrap",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "name": "openspending/os-bootstrap",
+  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web. Customized version for OpenSpending.",
   "keywords": [
     "css",
     "js",
@@ -20,10 +20,14 @@
     {
       "name": "Jacob Thornton",
       "email": "jacobthornton@gmail.com"
+    },
+    {
+      "name": "Levko Kravets",
+      "email": "levko.ne@gmail.com"
     }
   ],
   "support": {
-    "issues": "https://github.com/twbs/bootstrap/issues"
+    "issues": "https://github.com/openspending/os-bootstrap/issues"
   },
   "license": "MIT",
   "extra": {

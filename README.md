@@ -1,3 +1,9 @@
+# OS Bootstrap  
+
+This is a customized version of Bootstrap framework, created for using in OpenSpending applications.
+
+Original README is available below.    
+
 # [Bootstrap](http://getbootstrap.com)
 
 [![Slack](https://bootstrap-slack.herokuapp.com/badge.svg)](https://bootstrap-slack.herokuapp.com)
