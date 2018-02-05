@@ -7449,7 +7449,7 @@ button.close {
        -o-transform: rotate(270deg);
           transform: rotate(270deg);
 }
-.os-icon-chart-donut:before {
+.os-icon-donutchart:before {
   content: "\e900";
 }
 .os-icon-barchart:before {
